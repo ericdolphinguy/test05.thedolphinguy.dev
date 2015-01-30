@@ -104,3 +104,318 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 12.0 Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/**
+* Custom Style (Temporary Location)
+*/
+
+$color_1: rgb(82,100,120);
+
+body {
+  background: #2c3f50;
+}
+
+#page {
+  margin: 0 auto;
+  padding: 40px 0;
+  min-width: 420px;
+  width: 1280px;
+}
+
+#masthead {
+  box-sizing: border-box;
+  float: left;
+  padding: 0 40px 0 0;
+  width: 25%;
+}
+
+#masthead .site-branding {
+  background: #ecf0f1 url(../images/logo.jpg) center center no-repeat;
+  background-size: 80%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  height: 0;
+  margin: 0 0 20px;
+  overflow: hidden;
+  padding-bottom: 100%;
+  text-indent: -999%;
+  width: 100%;
+}
+
+#masthead .site-branding .site-title {
+  text-align: center;
+}
+
+#masthead .site-branding .site-title a {
+  color: #54677a;
+  text-decoration: none;
+}
+
+#masthead .site-branding .site-description {
+  display: none;
+}
+
+#masthead .main-navigation {
+  text-align: center;
+}
+
+#masthead .main-navigation .menu .page_item,
+#masthead .main-navigation .menu .menu-item {
+  border-bottom: 1px solid #334559;
+  float: none;
+  padding: 12px 0;
+}
+
+#masthead .main-navigation .menu .page_item a,
+#masthead .main-navigation .menu .menu-item a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#primary {
+  float: left;
+  width: 50%;
+
+  .page-header {
+    background: $color_1;
+    margin: 0 0 24px;
+    padding: 24px;
+
+    .page-title {
+      color: #fff;
+      font-weight: normal;
+    }
+  }
+}
+
+#content .hentry {
+  background: #16a086;
+  position: relative;
+}
+
+#content .entry-header {
+  background: #28c1a3;
+  margin: 0 25% 0 0;
+  padding: 20px;
+
+  .entry-title {
+    a {
+      color: #fff;
+      font-weight: normal;
+      text-decoration: none;
+    }
+  }
+}
+
+#content .entry-meta {
+  background: url(../images/pin.jpg) center 20px no-repeat;
+  background-size: 80%;
+  padding: 25% 0 0 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 25%;
+
+  > span {
+    background: #28c1a3;
+    display: block;
+    margin: 0 0 2px 0;
+    padding: 12px;
+
+    a {
+      color: #094e3a;
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
+
+#content .entry-content {
+  background: #c7efe7;
+  margin: 0 25% 0 0;
+  padding: 20px;
+}
+
+#content .entry-footer {
+  display: none;
+}
+
+#secondary {
+  box-sizing: border-box;
+  float: right;
+  padding: 0 0 0 40px;
+  width: 25%;
+}
+
+#secondary .widget {
+  background: #cbd7d7;
+  font-size: 15px;
+}
+
+#secondary .widget .widget-title {
+  background: #7e8c8d;
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+  padding: 12px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#secondary .widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#secondary .widget ul li {
+  border: solid #7e8c8d;
+  border-width: 1px 0;
+  padding: 12px 24px;
+}
+
+#secondary .widget a {
+  color: #2c3f50;
+  text-decoration: none;
+}
+
+#secondary .widget_search {
+  padding: 12px;
+
+  .search-form .search-field {
+    border: 0;
+    @include border-radius(0);
+    box-sizing: border-box;
+    padding: 6px 12px;
+    width: 100%;
+  }
+}
+
+#colophon {
+  clear: both;
+  display: none;
+  text-align: center;
+}
+
+@media all and (max-width: 1300px) {
+  #page {
+    width: 960px;
+  }
+
+  #masthead {
+  }
+
+  #primary {
+    float: right;
+    width: 75%;
+  }
+
+  #secondary {
+    float: left;
+    padding: 0 40px 0 0;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  #page {
+    padding: 20px 20px;
+    width: 100%;
+  }
+
+  #masthead {
+    float: none;
+    padding: 0;
+    width: 100%;
+
+    .site-branding {
+      float: left;
+      padding-bottom: 25%;
+      width: 25%;
+    }
+
+    #site-navigation {
+      clear: none;
+      float: right;
+      width: 70%;
+    }
+  }
+
+  #primary {
+    float: none;
+    width: 100%;
+  }
+
+  #secondary {
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  #page {
+    position: relative;
+  }
+
+  #masthead {
+    text-align: center;
+    .site-branding {
+      float: none;
+      margin: 0 auto 20px;
+      padding-bottom: 60%;
+      width: 60%;
+    }
+
+    #site-navigation {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 9;
+
+      .menu-toggle {
+        background: #fff;
+        border: 0;
+        display: block;
+        font-size: 0;
+        height: 24px;
+        margin: 12px 0 0 12px;
+        overflow: hidden;
+        text-align: left;
+        text-indent: -999%;
+        width: 24px;
+      }
+
+      .menu {
+      }
+
+      &.toggled {
+        background: rgb(44,63,80);
+      }
+    }
+  }
+
+  #main {
+    .hentry {
+      .entry-header {
+        margin: 0 30% 0 0;
+
+        .entry-meta {
+          padding: 30% 0 0;
+          width: 30%;
+        }
+      }
+
+      .entry-content {
+        margin: 0 30% 0 0;
+      }
+    }
+  }
+
+  #secondary {
+  }
+}
