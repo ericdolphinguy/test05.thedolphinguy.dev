@@ -28,5 +28,11 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php
+
+/**
+ * this is a really awesome sidebar!
+ */
+
+get_sidebar(); ?>
 <?php get_footer(); ?>
