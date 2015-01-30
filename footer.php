@@ -16,6 +16,7 @@
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
 		</div><!-- .site-info -->
+        <div class="copyright">Copyright DolphinGuys 2015</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
